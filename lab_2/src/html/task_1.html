@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Завдання 1</title>
+<h3>Форма для додавання викладача</h3>
+    </head>
+    <body>
+<form action="" method="post">
+<div><label for="fullname" ><i>Повне ім'я:</i></div>
+<div> </div><input type="text" id="fullname"  name="fullname" style="border-radius: 4px;background-color: rgb(241, 251, 252);border-width: 1px;"required autofocus></div>
+<div></div>
+<div><label for="sex" ><i>Стать:</i></div>
+<div>
+<select id="sex" name="sex" style="border-radius: 4px;background-color: rgb(241, 251, 252);border-width: 1px;"required>
+        <option disabled selected></option>
+        <option>Чоловіча</option>
+        <option>Жіноча</option>
+</select>
+<div></div>
+<div><label for="dofb" ><i>Дата народження:</i></div>
+<div><input type="date" id="dofb"  name="dofb" style="border-radius: 4px;background-color: rgb(241, 251, 252);border-width: 1px;" ></div>
+<div></div>
+<div><label for="mail" ><i>Email:</i></div>
+<div> <input type="email" id="mail" name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required style="border-radius: 4px;background-color: rgb(241, 251, 252);border-width: 1px;"></div>
+<div></div>
+<div><label for="phone" ><i>Номер телефону:</i></div>
+<div> <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required style="border-radius: 4px;background-color: rgb(241, 251, 252);border-width: 1px;"></div>
+<div></div>
+<div><label for="colofback" ><i>Бажаний колір фону:</i></div>
+<div><input type="color" id="colofback" name="colofback" style="border-radius: 4px;background-color: rgb(241, 251, 252);border-width: 1px;"required></div>
+<div></div>
+<div><label for="country" ><i>Країна:</i></div>
+<div><input type="text" id="country" name="country" style="border-radius: 4px;background-color: rgb(241, 251, 252);border-width: 1px;"required></div>
+<div></div>
+<div><label for="city" ><i>Місто:</i></div>
+<div><input type="text" id="city" name="city" style="border-radius: 4px;background-color: rgb(241, 251, 252);border-width: 1px;"required></div>
+<div></div>
+<div><label for="comment" ><i>Коментар:</i></div>
+<div><textarea rows="4" cols="50" id="comment" name="comment" style="border-radius: 4px;background-color: rgb(241, 251, 252);border-width: 1px;"required></textarea></div>
+
+<input type="submit" value="Додати"style="border-radius: 4px;">
+
+</form>
+
+
+    </body>
+    <footer>
+
+    </footer>
+</html>
