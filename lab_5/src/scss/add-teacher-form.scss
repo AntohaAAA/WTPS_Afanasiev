@@ -1,0 +1,15 @@
+.teacher-form {
+  border-radius: 5px;
+
+  &__container {
+    width: 560px;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    background-color: white;
+  }
+}
+#notes{
+  text-align: left;
+}

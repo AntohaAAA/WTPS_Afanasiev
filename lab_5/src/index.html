@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head itemscope itemtype="http://schema.org/WebSite">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Project</title>
+    <title >Teachinder</title>
+
+    <link rel="stylesheet" href="./css/app.css" />
+    
+    <link rel="stylesheet" href="./css/style.css" />
+    
+      
+  
+  
+    <header class="header container">
+      <p class="header__title">Teachinder</p>
+      <div class="header__search-bar">
+        <form>
+          <input
+            type="text"
+            placeholder="Name, note or age to search"
+            class="text-input"
+            id="s_input"
+          />
+          <button class="btn small-btn" id="search" type="button">Search</button>
+        </form>
+      </div>
+    </header>
+    <nav class="navbar navbar-top container">
+      <div class="navbar__links">
+        <a class="navbar__element" href="#teachers">Teachers</a>
+        <a class="navbar__element" href="#statistics">Statistics</a>
+        <a class="navbar__element" href="#favorites">Favorites</a>
+        <a class="navbar__element" href="#about">About</a>
+      </div>
+      <button class="btn navbar__btn" type="button" onclick="PopUp2Show()">Add Teacher</button>
+    </nav>
+  </head>
+    <body itemscope itemtype="http://schema.org/WebPage" class="main"></body>
+    <section class="container" id="teachers">
+      <div class="separator">
+        <hr />
+      </div>
+      <h3 class="title">Top Teachers</h3>
+      <div class="teachers__filters-row">
+        <div class="fieldset inline-fieldset">
+          <label for="inAge" class="label">Age</label>
+          <select id="inAge" class="thin-input">
+            <option>Any</option>
+            <option>18-31</option>
+            <option>32-50</option>
+            <option>50-80</option>
+          </select>
+        </div>
+        <div class="v-separator"></div>
+        <div class="fieldset inline-fieldset">
+          <label for="inRegion" class="label">Region</label>
+          <select id="inRegion" class="thin-input">
+            <option>Any</option>
+            <option>Europe</option>
+            <option>Asia</option>
+            <option>America</option>
+            <option>Other</option>
+            
+          </select>
+        </div>
+        <div class="v-separator"></div>
+        <div class="fieldset inline-fieldset">
+          <label for="inSex" class="label">Sex</label>
+          <select id="inSex" class="thin-input">
+            <option>Any</option>
+            <option>male</option>
+            <option>female</option>
+          </select>
+        </div>
+        <div class="v-separator"></div>
+        <div class="fieldset inline-fieldset">
+          <input type="checkbox" id="inWithPhoto" style="align-self: center" />
+          <label for="inWithPhoto" class="label">Only with photo</label>
+        </div>
+        <div class="v-separator"></div>
+        <div class="fieldset inline-fieldset">
+          <input
+            type="checkbox"
+            id="inOnlyFavorites"
+            style="align-self: center"
+          />
+          <label for="inOnlyFavorites" class="label">Only favorites</label>
+        </div>
+      </div>
+      <div class="teachers-list" id="list">
+         <!-- <div class="teacher-compact-info" type="button" onclick="PopUpShow()" >
+          <div class="teacher-avatar">
+            <img
+              class="teacher-avatar__img"
+              src=" ./images/teacher.jpg"
+              alt="Teacher photo"
+              
+            />
+          </div>
+          <p class="teacher-compact-info__name">Tim Cook</p>
+          <p class="teacher-compact-info__specialty">Computer Science</p>
+          <p class="teacher-compact-info__nationality">USA</p>
+        </div>
+        <div class="teacher-compact-info" type="button" onclick="PopUpShow()">
+          <div class="teacher-avatar">
+            <h3 class="teacher-avatar__placeholder">A. A</h3>
+          </div>
+          <p class="teacher-compact-info__name">Anton Afanasiev</p>
+          <p class="teacher-compact-info__specialty">Computer Science</p>
+          <p class="teacher-compact-info__nationality">Ukraine</p>
+        </div>
+        <div class="teacher-compact-info" type="button" onclick="PopUpShow()">
+          <div class="teacher-avatar">
+            <h3 class="teacher-avatar__placeholder">A. A</h3>
+          </div>
+          <p class="teacher-compact-info__name">Anton Afanasiev</p>
+          <p class="teacher-compact-info__specialty">Computer Science</p>
+          <p class="teacher-compact-info__nationality">Ukraine</p>
+        </div>
+        <div class="teacher-compact-info" type="button" onclick="PopUpShow()">
+          <div class="teacher-avatar">
+            <h3 class="teacher-avatar__placeholder">A. A</h3>
+          </div>
+          <p class="teacher-compact-info__name">Anton Afanasiev</p>
+          <p class="teacher-compact-info__specialty">Computer Science</p>
+          <p class="teacher-compact-info__nationality">Ukraine</p>
+        </div>
+        <div class="teacher-compact-info" type="button" onclick="PopUpShow()">
+          <div class="teacher-avatar">
+            <h3 class="teacher-avatar__placeholder">A. A</h3>
+          </div>
+          <p class="teacher-compact-info__name">Anton Afanasiev</p>
+          <p class="teacher-compact-info__specialty">Computer Science</p>
+          <p class="teacher-compact-info__nationality">Ukraine</p>
+        </div>
+        <div class="teacher-compact-info" type="button" onclick="PopUpShow()">
+          <div class="teacher-avatar">
+            <h3 class="teacher-avatar__placeholder">A. A</h3>
+          </div>
+          <p class="teacher-compact-info__name">Anton Afanasiev</p>
+          <p class="teacher-compact-info__specialty">Computer Science</p>
+          <p class="teacher-compact-info__nationality">Ukraine</p>
+        </div>
+        <div class="teacher-compact-info" type="button" onclick="PopUpShow()">
+          <div class="teacher-avatar">
+            <h3 class="teacher-avatar__placeholder">A. A</h3>
+          </div>
+          <p class="teacher-compact-info__name">Anton Afanasiev</p>
+          <p class="teacher-compact-info__specialty">Computer Science</p>
+          <p class="teacher-compact-info__nationality">Ukraine</p>
+        </div>
+        <div class="teacher-compact-info" type="button" onclick="PopUpShow()">
+          <div class="teacher-avatar">
+            <h3 class="teacher-avatar__placeholder">A. A</h3>
+          </div>
+          <p class="teacher-compact-info__name">Anton Afanasiev</p>
+          <p class="teacher-compact-info__specialty">Computer Science</p>
+          <p class="teacher-compact-info__nationality">Ukraine</p>
+        </div>  -->
+      </div>
+      <div class="paging" id="pagination">
+        <!-- <span class="paging__button" id="p_1">1</span>
+        <span class="paging__button" id = "p_2">2</span>
+        <span class="paging__button" id="p_3">3</span>
+        <span class="paging__button" id="p_4">4</span>
+        <span class="paging__button" id="p_5">5</span> -->
+      </div>
+    </section>
+    <section class="container" id="statistics">
+      <div class="separator">
+        <hr />
+      </div>
+      <h3 class="title">Statistics</h3>
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th class="stats-table__header" onclick="sortTable(0)">
+              Name <span class="stats-table__header-icon">↓</span>
+            </th>
+            <th class="stats-table__header" onclick="sortTable(1)">
+              Speciality <span class="stats-table__header-icon">↓</span>
+            </th>
+            <th class="stats-table__header" onclick="sortTable(2)">
+              Age <span class="stats-table__header-icon">↓</span>
+            </th>
+            <th class="stats-table__header" onclick="sortTable(3)">
+              Gender <span class="stats-table__header-icon">↓</span>
+            </th>
+            <th class="stats-table__header" onclick="sortTable(4)">
+              Nationality <span class="stats-table__header-icon">↓</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="myTable">
+        
+        </tbody>
+      </table>
+      <div class="paging" id="pagination_2">
+       
+      </div>
+    </section>
+    <section class="container" id="favorites">
+      <div class="separator">
+        <hr />
+      </div>
+      <h3 class="title">Favorites</h3>
+      <div class="teachers-list favorite-teachers" id="fav">
+        
+      </div>
+    </section>
+    
+      
+    
+    <footer class="footer container" id="about">
+      <div class="separator">
+        <hr />
+      </div>
+      <p class="footer__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis mauris vitae vehicula ornare. Sed rutrum congue ex. Mauris ultrices mattis augue nec finibus. Nunc pulvinar elit nec feugiat ultrices. Praesent vitae tellus in est pulvinar vestibulum eget a dui. In viverra posuere eros ut faucibus. Proin pretium lectus vitae ex tempor elementum. Cras mollis eros at ligula sagittis vulputate. Aliquam ultrices, tellus eu fermentum efficitur, ligula urna viverra felis, sit amet ultrices sapien tellus rhoncus purus. Ut tempor eros id nisl tempus, quis varius libero euismod
+      </p>
+      <p class="footer__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis mauris vitae vehicula ornare. Sed rutrum congue ex. Mauris ultrices mattis augue nec finibus. Nunc pulvinar elit nec feugiat ultrices. Praesent vitae tellus in est pulvinar vestibulum eget a dui. In viverra posuere eros ut faucibus. Proin pretium lectus vitae ex tempor elementum. Cras mollis eros at ligula sagittis vulputate. Aliquam ultrices, tellus eu fermentum efficitur, ligula urna viverra felis, sit amet ultrices sapien tellus rhoncus purus.
+      </p>
+      <p class="footer__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis mauris vitae vehicula ornare.
+      </p>
+      <nav class="navbar">
+        <div class="navbar__links">
+          <a class="navbar__element" href="#teachers">Teachers</a>
+          <a class="navbar__element" href="#statistics">Statistics</a>
+          <a class="navbar__element" href="#favorites">Favorites</a>
+          <a class="navbar__element" href="#about">About</a>
+        </div>
+        <button class="btn navbar__btn" type="button" onclick="PopUp2Show()">Add Teacher</button>
+      </nav>
+    </footer>
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+               
+            PopUpHide();
+            PopUp2Hide();
+        });
+
+        function PopUpShow(){
+    $("#popup1").show();
+}
+
+function PopUpHide(){
+    $("#popup1").hide();
+}
+function PopUp2Show(){
+    $("#popup2").show();
+}
+
+function PopUp2Hide(){
+    $("#popup2").hide();
+}
+function sortTable(n){
+  const table = document.querySelector('.stats-table');
+  
+  const rows = table.tBodies[0].rows;
+  const direction = (table.dataset.sortDir || "asc") === "asc" ? 1 : -1;
+  Array.from(rows)
+  .sort((a, b) =>
+    direction *
+    a.cells[n].textContent.trim().localeCompare(b.cells[n].textContent.trim())
+  )
+  .forEach((row) => table.tBodies[0].appendChild(row));
+  table.dataset.sortDir = direction === 1 ? "desc" : "asc";
+
+
+
+}
+        
+    </script>
+    <!-- <script src="./js/script.js"></script> -->
+    <script type="module" src="./js/Lab_5.mjs"></script>
+    
+   
+  <div class="b-popup" id="popup1">
+      <div class="b-popup-content">
+        <div class="modal__header">
+          <p>Teacher info</p>
+          <span class="closebtn" type="button" onclick="PopUpHide()">&#x2715;</span>
+        </div>
+        
+          <div class="tc_container_1">
+            <div class="box_1">
+          
+      </div>
+          <div class="box_2">
+          
+          </div>
+        </div>
+          <div class="tc_container_2">
+            <!-- <p>  Sed lobortis mauris vitae vehicula ornare. Sed rutrum congue ex. Mauris ultrices mattis augue nec finibus. Nunc pulvinar elit nec feugiat ultrices. Praesent vitae tellus in est pulvinar vestibulum eget a dui. In viverra posuere eros ut faucibus. Proin pretium lectus vitae ex tempor elementum. Cras mollis eros at ligula sagittis vulputate.</p> -->
+          </div>  
+  </div>
+  </div>
+
+  <div class="b-popup" id="popup2">
+    <div class="b-popup-content">
+      <div class="modal__header">
+        <p>Add teacher</p>
+        <span class="closebtn" type="button" onclick="PopUp2Hide()">&#x2715;</span>
+      </div>
+      <div class="teacher-form__container">
+        <form class="teacher-form" action="">
+          <div class="form-field">
+            <label>Name </label>
+            <input id="f_n" type="text" name="full_name" required autofocus />
+          </div>
+
+          <div class="form-field">
+            <label for="speciality">Speciality</label>
+            <select id="sp"name="speciality" id="speciality">
+              <option value="Mathematics">Mathematics</option>
+              <option value="Physics">Physics</option>
+              <option value="English">English</option>
+              <option value="computerScience">Computer Science</option>
+              <option value="Dancing">Dancing</option>
+              <option value="Chess">Chess</option>
+              <option value="Biology">Biology</option>
+              <option value="Chemistry">Chemistry</option>
+              <option value="Law">Law</option>
+              <option value="Art">Art</option>
+              <option value="Medicine">Medicine</option>
+              <option value="Statistics">Statistics</option>
+            </select>
+          </div>
+        
+          <div class="form-field-group">
+            <div class="form-field">
+              <label>Country </label>
+              <input type="text" name="country" id="ctr" required />
+            </div>
+            <div class="form-field">
+              <label>City </label>
+              <input type="text" name="city" id="city"required />
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <div class="form-field">
+              <label>Email </label>
+              <input
+                type="email"
+                name="email"
+               
+                id="email"
+                required
+              />
+            </div>
+            
+            <div class="form-field">
+              <label>Phone </label>
+              <input type="tel" name="tel" id="tel" pattern="[0-9]{10}" required />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>Date of birth </label>
+            <input type="date" name="b_date" id="b_d"required />
+          </div>
+
+          <div class="form-field-row">
+            <label>Gender</label>
+            <div class="flex">
+              <label for="gender">Male</label>
+              <input
+                type="radio"
+                name="gender"
+                value="male"
+                id="gender"
+                checked="checked"
+              />
+              <label for="gender">Female</label>
+              <input type="radio" name="gender" value="female" />
+            </div>
+          </div>
+
+          <div class="form-field-row">
+            <label for="back_color">Background color </label>
+            <input type="color" name="back_color" id="b_c"/><br />
+          </div>
+
+          <div id="notes">
+            <label>Notes (optional)</label>
+          </div>
+
+            <div>
+            <textarea id="textarea" name="comment" rows="4"></textarea>
+          </div>
+          </div>
+          
+          <input class="btn form-submit" type="button" id="AddTeacher" value="Add" />
+          
+          
+          
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>

@@ -1,0 +1,585 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+.teacher-card__header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #464547;
+  padding: 20px;
+}
+.teacher-card__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.teacher-card__info {
+  display: flex;
+  gap: 40px;
+}
+.teacher-card__contact {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.teacher-card__name {
+  font-size: 28px;
+  padding-bottom: 30px;
+}
+.teacher-card__speciality {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.teacher-card__additional-info {
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+.teacher-card__describe {
+  padding-top: 20px;
+  text-align: left;
+}
+.teacher-card__email {
+  font-size: 14px;
+  padding-bottom: 20px;
+  color: #1a9cb0;
+}
+
+.tc_container_1 {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+}
+
+.box_1 {
+  width: 200px;
+  height: 220px;
+  margin-right: 30px;
+}
+
+.box_2 {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.tc_container_2 {
+  margin-top: 30px;
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  height: 100px;
+  padding: 20px;
+  text-align: left;
+}
+
+.teacher-form {
+  border-radius: 5px;
+}
+.teacher-form__container {
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  background-color: white;
+}
+
+#notes {
+  text-align: left;
+}
+
+.modal {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 10;
+}
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+}
+.modal_close {
+  display: none;
+}
+.modal__header {
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+  height: 50px;
+  color: white;
+  background-color: hsl(270, 1%, 27%);
+  padding: 2px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 20px;
+}
+.form-field label {
+  padding-bottom: 10px;
+}
+
+.form-field-row {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.form-field-row > label {
+  padding-right: 40px;
+}
+
+.form-field-group {
+  display: flex;
+  gap: 24px;
+}
+.form-field-group div {
+  flex: 1;
+}
+
+.form-radio {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: white;
+  border: 1px grey solid;
+  border-radius: 2px;
+}
+.input[type=color] {
+  width: 50px;
+}
+
+.select {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: white;
+  border: 1px grey solid;
+  border-radius: 2px;
+}
+
+.textarea {
+  width: 100%;
+  height: 125px;
+}
+
+.form-submit {
+  margin-top: 20px;
+  margin-bottom: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
+  width: 94%;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "header" "nav" "top-teachers" "statistics" "favorites" "footer";
+  grid-row-gap: 40px;
+  font-family: "PT Sans", serif;
+}
+
+.container {
+  width: 100%;
+  padding: 0 calc((100vw - 1200px) / 2);
+}
+
+.flex {
+  display: flex;
+}
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inline-fieldset {
+  flex-direction: row;
+}
+
+.label {
+  color: rgb(91, 91, 91);
+  align-self: center;
+}
+.label:hover {
+  color: rgb(34, 34, 34);
+}
+
+.thin-input {
+  padding: 5px;
+}
+
+.text-input {
+  padding: 10px;
+}
+
+.separator {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.separator hr {
+  width: 70%;
+  height: 1px;
+  border-color: #222;
+  margin: 0;
+}
+
+.v-separator {
+  border-left: 2px dotted rgb(153, 153, 153);
+}
+
+#teachers {
+  grid-area: top-teachers;
+}
+
+.teachers-list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+  row-gap: 40px;
+  flex-wrap: wrap;
+  height: auto;
+  width: auto;
+}
+
+.teachers__filters-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  gap: 20px;
+}
+
+.favorite-teachers {
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.navbar.navbar-top {
+  grid-area: nav;
+}
+.navbar__links {
+  display: flex;
+  flex-direction: row;
+  column-gap: 40px;
+}
+.navbar__element {
+  color: #f75c49;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar__element:hover {
+  color: #cc4836;
+  cursor: pointer;
+}
+.navbar__btn {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+}
+.header__title {
+  font-size: 48px;
+  font-family: "Source Sans Pro";
+  color: #ffffff;
+  text-shadow: -1px -2px 2px #f75f9b, 1px 1px 1px #111111;
+}
+.header__search-bar {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+.header__search-bar__search-input {
+  padding: 15px 23px;
+}
+
+.footer {
+  grid-area: footer;
+  padding-bottom: 40px;
+}
+.footer .navbar {
+  padding-top: 35px;
+}
+.footer__text {
+  text-align: left;
+  font-family: "PT Sans";
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 14px;
+}
+
+.paging {
+  text-align: left;
+  margin-top: 36px;
+}
+.paging__button {
+  color: #1a9cb0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.paging__button:hover {
+  text-decoration: #1096d0 underline;
+  cursor: pointer;
+  color: #1096d0;
+}
+
+#statistics {
+  grid-area: statistics;
+}
+
+#favorites {
+  grid-area: favorites;
+}
+
+.stats-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+.stats-table__header {
+  border-bottom: 1px #222 solid;
+}
+.stats-table__header-icon {
+  visibility: hidden;
+}
+.stats-table__header:hover {
+  box-sizing: border-box;
+  border-bottom: 5px #222 solid;
+  cursor: pointer;
+}
+.stats-table__header:hover .stats-table__header-icon {
+  visibility: visible;
+}
+.stats-table th {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.stats-table td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.stats-table tr:nth-child(even) {
+  background-color: #f9f5f9;
+}
+
+.btn {
+  border: 1px #f75c49 solid;
+  color: #f75c49;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  vertical-align: center;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #f75c49;
+  cursor: pointer;
+}
+
+.small-btn {
+  font-size: 16px;
+  padding: 10px 23px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Source Sans Pro", serif;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 48px;
+  margin-top: 40px;
+}
+
+.teacher-compact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  row-gap: 10px;
+}
+.teacher-compact-info__name {
+  font-size: inherit;
+  font-weight: 600;
+}
+.teacher-compact-info__nationality {
+  font-size: 12px;
+}
+.teacher-compact-info__specialty {
+  font-size: 14px;
+  color: #888897;
+}
+
+.teacher-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px #f75c49 solid;
+  border-radius: 100%;
+  padding: 0;
+  width: 7em;
+  height: 7em;
+  font-size: inherit;
+  overflow: hidden;
+  transition: 0.25s;
+  margin: 8px;
+}
+.teacher-avatar:hover {
+  border-color: #cc4836;
+  cursor: pointer;
+}
+.teacher-avatar__img {
+  transition: 0.5s ease-in-out;
+  transform: scale(1.5);
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: inherit;
+  padding: 0;
+}
+.teacher-avatar__img:hover {
+  transform: scale(2);
+  transform-origin: 50%;
+}
+.teacher-avatar__placeholder {
+  font-weight: 600;
+  color: #f75c49;
+  font-size: 24px;
+  font-family: "Source Sans Pro", serif;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  transition: 0.5s ease-in-out;
+  border-radius: inherit;
+}
+.teacher-avatar__placeholder:hover {
+  transform: scale(1.25);
+  color: #cc4836;
+}
+
+.favorite-teacher {
+  position: static;
+  width: 100%;
+  display: block;
+  text-align: end;
+  z-index: 1;
+  color: yellow;
+  font-size: 32px;
+}
+
+.b-container {
+  width: 200px;
+  height: 150px;
+  background-color: #ccc;
+  margin: 0px auto;
+  padding: 10px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.b-popup {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.b-popup .b-popup-content {
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 5%;
+}
+
+#pp {
+  color: #f75c49;
+  font-family: "PT Sans";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#f_n {
+  width: 100%;
+  height: 30px;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+#textarea {
+  width: 100%;
+  height: 200 px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100vw;
+    padding: 0 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
